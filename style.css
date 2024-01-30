@@ -5,9 +5,9 @@
     box-sizing: border-box;
 }
 .hero{
-    width: 100;
-    height: 100vh;
-    display: flex;
+    width: 100%;
+    height:100vh;
+    display:flex;
     align-items: center;
     justify-content: center;
 }
@@ -15,35 +15,38 @@
     display: inline-block;
     font-size: 18px;
     padding: 24px 70px;
-    background: #d20fcf;
+    background: #8e85dd;
     color: #fff;
     border-radius: 40px;
     border: none;
     outline: none;
     cursor: pointer;
     position: relative;
-    box-shadow: 0 2px 25px rgba(193, 14, 160, 0.5);
+    box-shadow: 0 2px rgba(211, 136, 175, 0.5);
+    transition: box-shadow 0.25s;
+    z-index: 2;
 }
 .btn:active{
-    background: #d80972;
-    box-shadow: 0 2px 25px rgba(247, 79, 216, 0.5);;
+    background: #6d5aea;
+    box-shadow: 0 2px 25px rgba(164, 2, 86, 0.5);
 }
 .btn span{
-    background: #ff1876;
-    border: 1px solid #ff1876;
+    background: #8e85dd;
+    border: 1px solid #8e85dd;
     width: 14px;
     height: 14px;
     border-radius: 50%;
     position: absolute;
+    z-index: -1;
+    transform: scale(0);
 }
-
 .btn span:nth-child(1){
     top: -20%;
     left: -10%;
 }
 .btn span:nth-child(2){
     top: -130%;
-    left: 0;
+    left: 0%;
 }
 .btn span:nth-child(3){
     top: -50%;
@@ -51,32 +54,88 @@
     background: transparent;
 }
 .btn span:nth-child(4){
-    top: 100%;
-    left: 10%;
-}
-.btn span:nth-child(5){
-    top: -70%;
-    left: -10%;
-}
-.btn span:nth-child(6){
-    top: 920;
-    left: 10%;
-}
-.btn span:nth-child(7){
-    top: 40%;
-    left: -10%;
-    background: transparent;
-}
-.btn span:nth-child(8){
-    top: -80%;
-    left: 10%;
-}
-.btn span:nth-child(9){
-    top: 100%;
+    top: -66%;
+    left: 50%;
+}.btn span:nth-child(5){
+    top: -89%;
     left: 20%;
-}
-.btn span:nth-child(10){
-    top: -20%;
+}.btn span:nth-child(6){
+    top: 220%;
+    left: 30%;
+}.btn span:nth-child(7){
+    top: 150%;
+    left: 65%;
+}.btn span:nth-child(8){
+    top: 160%;
+    left: 15%;
+    background: transparent;
+}.btn span:nth-child(9){
+    top: 180%;
+    left: 80%;
+}.btn span:nth-child(10){
+    top: 80%;
+    left: 55%;
+}.btn span:nth-child(11){
+    top: -50%;
+    left: 70%;
+    background: transparent;
+}.btn span:nth-child(12){
+    top: -60%;
+    left: 80%;
+}.btn span:nth-child(13){
+    top: 90%;
+    left: -15%;
+}.btn span:nth-child(14){
+    top: 100%;
+    left: 110%;
+}.btn span:nth-child(15){
+    top: -90%;
     left: -10%;
     background: transparent;
+}.btn span:nth-child(16){
+    top: -125%;
+    left: 40%;
+}.btn span:nth-child(17){
+    top: 160%;
+    left: -10%;
+}.btn span:nth-child(18){
+    top: 140%;
+    left: 40%;
+    background: transparent;
+}.btn span:nth-child(19){
+    top: 40%;
+    left: 120%;
+}.btn span:nth-child(20){
+    top: 50%;
+    left: -30%;
+}.btn span:nth-child(21){
+    top: 220%;
+    left: -20%;
+    background: transparent;
+}.btn span:nth-child(22){
+    top: -135%;
+    left: 80%;
+}.btn span:nth-child(23){
+    top: -45%;
+    left: 105%;
+}.btn span:nth-child(24){
+    top: -55%;
+    left:125%;
+    background: transparent;
+}
+.anim{
+    animation: moving 0.7s linear reverse forwards;
+}
+
+@keyframes moving{
+    0%{
+        transform: scale(0);
+    }
+    10%{
+        transform: scale(1);
+    }
+    100%{
+        top: 50%;
+        left: 50%;
+    }
 }

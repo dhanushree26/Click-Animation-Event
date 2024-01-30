@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Confetti Animation</title>
+    <title>Confetti Animation</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="hero">
-        <button class="btn">Click here! 
+        <button class="btn" id="btn">Click here!
             <span></span>
             <span></span>
             <span></span>
@@ -33,9 +33,23 @@
             <span></span>
             <span></span>
             <span></span>
-        </button>
+         </button>
     </div>
 
+<script>
+    let btn = document.getElementById("btn");
+    let spans = document.getElementsByTagName("span");
 
+    btn.onclick = function(){
+        for(span of spans){
+            span.classList.remove("anim");
+        }
+        setTimeout(function(){
+            for(span of spans){
+            span.classList.add("anim");
+        }
+        },500)
+    }
+</script>
 </body>
 </html>
